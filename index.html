@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hero Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: glow 2.5s ease-in-out infinite alternate;
+      letter-spacing: 2px;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+        color: #fff;
+      }
+      to {
+        text-shadow: 0 0 20px #ff00e0, 0 0 40px #ff00e0, 0 0 60px #ff00e0;
+        color: #ffe;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      opacity: 0.85;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: #00f7ff;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      animation: fadeIn 2s ease 1s forwards;
+      opacity: 0;
+    }
+
+    .btn:hover {
+      background: #ff00e0;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Ignite Your Digital Presence</h1>
+    <p>Bold, clean, and unforgettable. This is where your journey begins. Make your first impression matter.</p>
+    <button class="btn">Get Started</button>
+  </section>
+</body>
+</html>
